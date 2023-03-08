@@ -1,0 +1,72 @@
+﻿@model StudentModule.Models.updateStudentViewModel
+@{
+}
+
+
+
+<h1>Update Form</h1>
+<form method="post" action="View" class="mt-5">
+    <div class="col-md-6">
+        <div class="form-outline">
+            <input type="text" id="typeText" class="form-control" asp-for="Id"  readonly />
+            <label class="form-label" for="typeText">Id</label>
+        </div>
+    </div>
+    <div class="row my-3">
+        <div class="col-md-6">
+            <div class="form-outline">
+                <input type="text" id="typeText" class="form-control" asp-for="UserFirstName" />
+                <label class="form-label" for="typeText">UserFirstName</label>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-outline">
+                <input type="text" id="typeText" class="form-control" asp-for="UserLastName" />
+                <label class="form-label" for="typeText">UserLastName</label>
+            </div>
+        </div>
+    </div>
+    <div class="row my-3">
+        <div class="col-md-12">
+            <div class="form-outline">
+                <input type="text" id="typeText" class="form-control" asp-for="UserName" />
+                <label class="form-label" for="typeText">UserName</label>
+            </div>
+        </div>
+    </div>
+    <div class="row my-3">
+        <div class="col-md-12">
+            <div class="form-outline">
+                <input type="text" id="typeText" class="form-control" asp-for="Password" />
+                <label class="form-label" for="typeText">Password</label>
+            </div>
+        </div>
+    </div>
+    <div class="row my-3">
+        <div class="col-md-6">
+            <div class="form-outline">
+                <input type="text" id="typeText" class="form-control" asp-for="Address" />
+                <label class="form-label" for="typeText">Address</label>
+            </div>
+        </div>
+        
+    </div>
+    <div class="row my-3">
+        <div class="col-md-6">
+            <div class="form-outline">
+                <input type="email" id="typeEmail" class="form-control" asp-for="Email" />
+                <label class="form-label" for="typeEmail">Email</label>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-outline">
+                <input type="text" id="typePhone" class="form-control" asp-for="Phone" />
+                <label class="form-label" for="typePhone">Phone</label>
+            </div>
+        </div>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Update</button>
+
+    <button asp-controller="Students" asp-action="Delete" type="submit" class="btn btn-danger">Delete</button>
+</form>

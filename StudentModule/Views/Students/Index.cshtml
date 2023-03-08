@@ -1,0 +1,37 @@
+﻿@model List<StudentModule.Models.Domain.Student>
+@{
+}
+
+<h1>Student Details</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>UserName</th>
+            <th>UserFirstName</th>
+            <th>UserLastName</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>Address</th>
+            <th> </th>
+            
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var student in Model)
+        {
+            <tr>
+                <td>@student.Id</td>
+                <td>@student.UserName</td>
+                <td>@student.UserFirstName</td>
+                <td>@student.UserLastName</td>
+                <td>@student.Email</td>
+                <td>@student.Phone</td>
+                <td>@student.Address</td>
+                <td><a href="Students/View/@student.Id">View</a></td>
+                
+            </tr>
+        }
+    </tbody>
+</table>
